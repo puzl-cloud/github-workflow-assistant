@@ -35,7 +35,7 @@ docker run --rm -d -p 3131:3000 -e GITHUB_PERSONAL_ACCESS_TOKEN=$MY_PAT ghcr.io/
 
 4. Navigate to http://localhost:3131 to access the dashboard.
 
-<img width="1200" alt="workflow-assistant" src="https://github.com/user-attachments/assets/745757ab-5f3b-4aea-94ea-ac9a96deb59f" />
+<img width="1200" alt="workflow-assistant" src="https://github.com/puzl-cloud/github-workflow-assistant/blob/main/ui/src/public/workflow-assistant.png?raw=true" />
 
 ## Using the Assistant
 
