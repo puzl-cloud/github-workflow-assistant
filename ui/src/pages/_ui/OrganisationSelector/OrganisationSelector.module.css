@@ -1,0 +1,11 @@
+.wrapper {
+    --text-sm: 18px;
+    --text-sm--line-height: 1.2;
+    --spacing: 6px;
+
+}
+
+.picker {
+    max-width: 100%;
+    min-width: 200px;
+}

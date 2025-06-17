@@ -1,0 +1,22 @@
+@import url(tokens.css);
+
+:root {
+    --gw__background: var(--background);
+    --gw__foreground: var(--foreground);
+
+    --gw__border-radius: 6px;
+    --gw__border-color: hsl(240, 3%, 28%);
+
+    --gw__color-primary: var(--gw__palette-primary-40);
+    --gw__color-primary-foreground: var(--gw__palette-primary-95);
+    --gw__color-neutral: var(--gw__palette-neutral-50);
+    --gw__color-neutral-foreground: var(--gw__palette-neutral-95);
+    --gw__color-error: var(--gw__palette-error-50);
+    --gw__color-error-foreground: var(--gw__palette-error-95);
+    --gw__color-success: var(--gw__palette-success-50);
+    --gw__color-success-foreground: var(--gw__palette-success-95);
+
+    --gw__text-color_medium: var(--gw__palette-neutral-50);
+    --gw__text-color_medium-lighter: var(--gw__palette-neutral-70);
+    --gw__text-color_body: var(--gw__foreground);
+}

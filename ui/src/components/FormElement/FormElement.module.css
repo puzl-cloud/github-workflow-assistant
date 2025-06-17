@@ -1,0 +1,9 @@
+.label {
+  font-size: var(--gw__text-label_font-size);
+  line-height: var(--gw__text-label_line-height);
+  font-weight: var(--gw__text-label_font-weight);
+  color: var(--gw__text-color_medium-lighter);
+  background-color: var(--gw__background);
+  display: block;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,26 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loader {
+  display: block;
+  border: 2px solid var(--color-gray-50);
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: rotate 800ms linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

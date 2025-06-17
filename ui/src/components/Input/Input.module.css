@@ -1,0 +1,23 @@
+.wrapper {
+    width: 100%;
+}
+
+.element {
+    --gw-input__color-primary: var(--gw__color-primary);
+
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--gw__border-radius);
+    border: 1px solid var(--gw__border-color);
+    color: var(--gw__text-color_body);
+    background-color: var(--gw__background);
+    width: 100%;
+    font-size: var(--gw__text-body_font-size);
+    line-height: var(--gw__text-body_line-height);
+}
+
+.element:focus {
+    border-color: var(--gw-input__color-primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--gw-input__color-primary) 20%, transparent);
+    outline: color-mix(in srgb, var(--gw-input__color-primary) 20%, transparent) 2px;
+}
+

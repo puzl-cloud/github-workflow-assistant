@@ -1,0 +1,103 @@
+.wrapper {
+    --spacing: 2px;
+    width: 100%;
+}
+
+/* Control */
+.wrapper [class$="-control"] {
+    background-color: color-mix(in oklab, var(--input) 30%, transparent);
+    box-shadow: none !important;
+    padding: 2px 0;
+}
+
+.wrapper [class$="-control"],
+.wrapper [class$="-control"]:hover,
+.wrapper [class$="-control"]:focus {
+    border-color: var(--input) !important;
+}
+
+.wrapper [class$="-control"]:hover,
+.wrapper [class$="-control"]:focus {
+    background-color: color-mix(in oklab, var(--input) 50%, transparent);
+    outline: none;
+    box-shadow: none !important;
+}
+
+.wrapper [class$="-control"] >*:not(:first-child) {
+    align-self: flex-start;
+    min-height: inherit;
+}
+
+.wrapper [class$="-indicatorSeparator"] {
+    display: none;
+}
+
+.wrapper [class$="-indicatorContainer"] {
+    cursor: pointer;
+}
+
+.wrapper [class$="-indicatorContainer"]:hover {
+    color: var(--foreground);
+    opacity: 0.5;
+}
+
+.wrapper [class$="-singleValue"],
+.wrapper input{
+    color: var(--foreground) !important;
+}
+
+/* Menu */
+.wrapper [class$="-menu"] {
+    border:1px solid var(--input);
+    padding: 4px;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Option */
+.option {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 150ms ease-in;
+    transition-property: background-color;
+}
+
+.option:hover {
+    background-color: var(--color-slate-800);
+}
+
+.option:focus {
+    background-color: var(--color-slate-700);
+}
+
+/* Tag */
+.label {
+    color: var(--foreground);
+}
+
+/* Clear Indicator */
+.wrapper [role="button"] {
+    --spacing: 4px;
+    --border: var(--foreground);
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 150ms ease-in;
+    transition-property: color, opacity;
+}
+
+.wrapper [role="button"]:hover {
+    color: var(--color-destructive);
+    opacity: 0.9;
+    background-color: transparent;
+}
+
+.wrapper [role="button"]:focus {
+    color: var(--color-destructive);
+    opacity: 1;
+    background-color: transparent;
+}
+
+.wrapper [role="button"]:hover svg,
+.wrapper [role="button"]:focus svg {
+    color: var(--color-destructive) !important;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+    --text-sm: 18px;
+    --text-sm--line-height: 1.2;
+    --spacing: 6px;
+
+    padding: 0 1.25rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--app-header-height);
+}
+
+.logoRow {
+    display: flex;
+    align-items: center;
+    color: var(--muted-foreground);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--foreground);
+}
+
+* + .logo {
+    margin-left: 0.5em;
+}
+
+.logoImg {
+    --color: #76b900;
+    margin-right: 0.25em;
+}
+
+.logoImg svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: var(--color);
+}

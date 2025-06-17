@@ -1,0 +1,29 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 0.25rem 2rem;
+    align-items: flex-start;
+}
+
+.listItem {
+    --line-height: 22px;
+    display: flex;
+    align-items: flex-start;
+    line-height: var(--line-height);
+}
+
+.checkboxSlot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--line-height);
+}
+
+.listItem label {
+    line-height: var(--line-height);
+}
+
+.listItem label > * {
+    min-height: var(--line-height);
+    vertical-align: middle;
+}

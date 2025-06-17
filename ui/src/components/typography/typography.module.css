@@ -1,0 +1,6 @@
+.caption {
+    margin: 0;
+    font-size: var(--gw__text-label_font-size);
+    line-height: var(--gw__text-label_line-height);
+    font-weight: var(--gw__text-label_font-weight);
+}

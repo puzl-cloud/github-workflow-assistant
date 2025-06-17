@@ -1,0 +1,10 @@
+.code {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.code, .code pre {
+  background-color: var(--background) !important;
+}

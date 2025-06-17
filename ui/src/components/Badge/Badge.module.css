@@ -1,0 +1,26 @@
+.badge {
+    --label-color-primary: var(--gw__palette-neutral-30);
+    --label-color-primary-foreground: var(--gw__color-neutral-foreground);
+
+    background-color: var(--label-color-primary);
+    color: var(--label-color-primary-foreground);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1em;
+    border: 1px solid  var(--label-color-primary);
+    padding: 0 0.75em;
+    font-size: var(--gw__text-label_font-size);
+}
+
+.variant-danger {
+    --label-color-primary: var(--gw__palette-error-30);
+    --label-color-primary-foreground: var(--gw__color-error-foreground);
+}
+
+.variant-success {
+    --label-color-primary: var(--gw__palette-success-30);
+    --label-color-primary-foreground: var(--gw__color-success-foreground);
+}
+
+.variant-default {
+}

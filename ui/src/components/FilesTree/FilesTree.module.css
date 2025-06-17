@@ -1,0 +1,37 @@
+.group {
+    padding-left: 1.5rem;
+}
+
+.item {
+    --icon-size: 16px;
+    --min-height: 32px;
+    --tree-item-padding-y: 4px;
+    --tree-item-element-min-height: calc(var(--min-height) - var(--tree-item-padding-y) * 2);
+    display: flex;
+    grid-gap: 0.25rem;
+    align-items: flex-start;
+    grid-template-columns: auto 1.25rem 1fr;
+    padding: var(--tree-item-padding-y) 0;
+    min-height: var(--min-height);
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.itemElement {
+    min-height: var(--tree-item-element-min-height);
+    display: flex;
+    align-items: center;
+}
+
+.checkboxWrapper {
+    min-width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemIcon {
+    opacity: 0.6;
+    width: var(--icon-size);
+    min-width: var(--icon-size);
+}
