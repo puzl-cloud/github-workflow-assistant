@@ -45,7 +45,7 @@ In the dashboard:
 
 1. Choose your organization. 
 
-It will start a shallow clone of `.github/workflows` folder from all branches in all repos available for your GitHub Personal Access Token.
+It will start a shallow clone of `.github/workflows` folder from all branches in all repos available for your GitHub Personal Access Token. The process might take a few minutes.
 
 2. Once clone is done, create `runs-on` replacement rule and choose repos and branches where you want to replace labels.
 
