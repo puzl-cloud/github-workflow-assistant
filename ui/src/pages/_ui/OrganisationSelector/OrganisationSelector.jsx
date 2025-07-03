@@ -32,6 +32,41 @@ export const OrganisationSelector = ({}) => {
       setOrganisation(orgs[0]);
     }
   }, [shouldPrefillOrganisation]);
+  
+  if (error) {
+    return (
+        <div className={styles.errorOverlay}>
+          <div className={styles.errorOverlayContent}>
+            <div>{error.message}</div>
+            <div>Please, make sure that you provided valid GitHub fine-grained personal token, issued with the following permissions:</div>
+            <div className={styles.permissions}>
+              <p><strong>Repositories:</strong></p>
+              <div>   - Content: `Read and write`</div>
+              <div>   - Workflows: `Read and write`</div>
+              <p><strong>Organizations:</strong></p>
+              <div>   - Members: `Read-only`</div>
+            </div>
+          </div>
+        </div>
+    );
+  } else if (orgs?.length === 0) {
+    return (
+      <div className={styles.errorOverlay}>
+        <div className={styles.errorOverlayContent}>
+          <div>No organisations found.</div>
+          <div>At this moment assistant works only for repos within organisation.</div>
+          <div>Check that your token was issued with following permissions:</div>
+          <div className={styles.permissions}>
+            <p><strong>Repositories:</strong></p>
+            <div>   - Content: `Read and write`</div>
+            <div>   - Workflows: `Read and write`</div>
+            <p><strong>Organizations:</strong></p>
+            <div>   - Members: `Read-only`</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.wrapper}>

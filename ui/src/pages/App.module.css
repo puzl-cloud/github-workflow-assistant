@@ -1,5 +1,6 @@
 .app {
     --app-header-height: 38px;
+    height: 100vh;
 }
 
 .grid {
@@ -8,11 +9,12 @@
     display: grid;
     grid-gap: 1rem;
     max-width: 2000px;
+    position: relative;
+    min-height: calc(100vh - var(--app-header-height));
 
 
     @media (min-width: 64em) {
         grid-template-columns: 20rem 1fr;
-        min-height: calc(100vh - var(--app-header-height));
     }
 
     @media (min-width: 1700px) {
