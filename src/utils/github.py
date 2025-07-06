@@ -141,8 +141,8 @@ async def list_available_repos(token: Token, org_name: str = None, per_page: int
             else f"{GITHUB_API_URL}/user/repos"
 
     while True:
-        endpoint = f"{endpoint}?per_page={per_page}&page={page}"
-        result = await github_request(HTTPMethod.GET, endpoint, bearer_token=token.value, max_attempts=2)
+        request_url = f"{endpoint}?per_page={per_page}&page={page}"
+        result = await github_request(HTTPMethod.GET, request_url, bearer_token=token.value, max_attempts=2)
         page_repos = result.get("repositories", []) if "repositories" in result else result
         if not page_repos:
             break
@@ -164,8 +164,8 @@ async def list_available_orgs(token: Token, per_page: int = 30) -> List[str]:
     orgs, page = [], 1
     endpoint = f"{GITHUB_API_URL}/user/memberships/orgs"
     while True:
-        endpoint = f"{endpoint}?per_page={per_page}&page={page}"
-        page_orgs = await github_request(HTTPMethod.GET, endpoint, bearer_token=token.value, max_attempts=2)
+        request_url = f"{endpoint}?per_page={per_page}&page={page}"
+        page_orgs = await github_request(HTTPMethod.GET, request_url, bearer_token=token.value, max_attempts=2)
         if not page_orgs:
             break
         orgs += [org["organization"]["login"] for org in page_orgs]

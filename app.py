@@ -12,7 +12,7 @@ logging.getLogger().setLevel(logging.INFO)
 
 APP_NAME = "github-workflow-assistant"
 app = Sanic(APP_NAME)
-app.config.API_VERSION = "0.0.1"
+app.config.API_VERSION = "0.1.1"
 app.config.API_TITLE = APP_NAME
 app.config.API_PRODUCES_CONTENT_TYPES = ['application/json']
 
